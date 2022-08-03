@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navbar, Container, Nav } from "react-bootstrap"
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Navigate, Route, Routes } from "react-router-dom";
 import About from './About'
 import Contact from './Contact';
 import Home from './Home';
@@ -16,7 +16,9 @@ export default class App extends Component {
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/about/*" element={<About />}/>
+                    <Route path="/about/*" element={<About />}>
+                        <Route index={true} element={<><AboutUs /><Navigate to="/about/aboutus"/></>}/>
+                    </Route>
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </>
