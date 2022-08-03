@@ -10,7 +10,7 @@ export default class OurProjects extends Component {
                             {
                                 [1, 2, 3, 4, 5, 6, 7, 8, 9].map(item => {
                                     return (
-                                        <div key={item} className="col-3 mt-3">
+                                        <div key={item} className="col-xl-3 col-lg-4 col-md-4 col-sm-6 mt-3">
                                             <div className="card shadow-sm">
                                                 <img src={`https://picsum.photos/100/10${item}`} className="card-img-top"></img>
                                                 <div className="card-body">
